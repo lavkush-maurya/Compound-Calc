@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /private/
+Allow: /
+Sitemap: https://2024compound-calc.vercel.app/sitemap.xml
