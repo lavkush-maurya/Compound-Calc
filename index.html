@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Compounding Calculator - Calculate your investment returns with ease."
+    />
+    <meta
+      name="keywords"
+      content="compounding calculator, investment calculator, interest, returns"
+    />
+    <meta property="og:title" content="Compounding Calculator" />
+    <meta
+      property="og:description"
+      content="Calculate your investment returns with our easy-to-use compounding calculator."
+    />
+    <meta property="og:image" content="placeholder-image.jpg" />
+    <meta property="og:url" content="http://compoundcalc.com/" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Compounding Calculator - Calculate Your Investment</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Compounding Calculator",
+        "url": "http://compoundcalc.com/",
+        "description": "An easy-to-use compounding calculator to calculate your investment returns.",
+        "author": {
+          "@type": "Person",
+          "name": "Lavkush Maurya"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "webtechlavv"
+        }
+      }
+    </script>
+    <script>
+      function calculateCompounding() {
+        let principal = parseFloat(document.getElementById("principal").value);
+        let rate = parseFloat(document.getElementById("rate").value) / 100;
+        let years = parseFloat(document.getElementById("years").value);
+        let result = principal * Math.pow(1 + rate, years);
+        document.getElementById("result").innerText =
+          "Future Value: $" + result.toFixed(2);
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Compounding Calculator</h1>
+        <p>
+          Calculate your investment returns with our simple compounding calculator.
+        </p>
+      </section>
+
+      <section class="calculator">
+        <h2>Investment Calculator</h2>
+        <form id="calculator-form">
+          <label for="principal">Initial Investment ($):</label>
+          <input type="number" id="principal" placeholder="1000" />
+          <label for="rate">Annual Interest Rate (%):</label>
+          <input type="number" id="rate" placeholder="5" />
+          <label for="years">Years:</label>
+          <input type="number" id="years" placeholder="10" />
+          <button type="button" onclick="calculateCompounding()">
+            Calculate
+          </button>
+          <p id="result"></p>
+        </form>
+      </section>
+      <section class="faq-section">
+        <h2>FAQ</h2>
+        <p>Have a question about our compounding calculator? Check out our <a href="faq.html">FAQ</a> page for answers to common questions.</p>
+    </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Compounding Calculator. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
